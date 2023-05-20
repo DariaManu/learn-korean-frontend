@@ -7,6 +7,9 @@ import Learning from "./pages/Learning";
 import Blog from "./pages/Blog";
 import {useState} from "react";
 import {UserContext} from "./context/UserContext";
+import Module1 from "./learning-modules/Module1";
+import Module2 from "./learning-modules/Module2";
+import QuizPage from "./pages/QuizPage";
 
 function App() {
     const [user, setUser] = useState({
@@ -24,8 +27,13 @@ function App() {
                     <Route path={"/learn-korean"} element={<HomePage/>}></Route>
                     <Route path={"/learn-korean/dictionary"} element={<Dictionary/>}></Route>
                     <Route path={"/learn-korean/learning"} element={<Learning/>}></Route>
-                    <Route path={"/learn-korean/blog"} element={<Blog/>}></Route>
 
+                    <Route path={"/learn-korean/learning/module1"} element={<Module1 moduleName={"module1"}/>}></Route>
+                    <Route path={"/learn-korean/learning/module2"} element={<Module2 moduleName={"module2"}/>}></Route>
+
+                    <Route path={"/learn-korean/learning/:moduleName/quiz"} element={<QuizPage/>}></Route>
+
+                    <Route path={"/learn-korean/blog"} element={<Blog/>}></Route>
                 </Routes>
             </UserContext.Provider>
         </BrowserRouter>

@@ -7,6 +7,7 @@ import './learning-style.css'
 
 import axios from "axios";
 import AccessDeniedPopUp from "../component/AccessDeniedPopUp";
+import {useNavigate} from "react-router-dom";
 
 const learningBaseUrl = " http://localhost:8083";
 
@@ -16,6 +17,8 @@ function Learning() {
     const {user} = useContext(UserContext);
     const [learningModuleNames, setLearningModuleNames] = useState([]);
     const [moduleAccess, setModuleAccess] = useState(true);
+
+    const navigate = useNavigate();
 
     useEffect(() => {
       console.log("fetch learning module names");
@@ -39,6 +42,7 @@ function Learning() {
             userProgressLevel: user.progressLevel
         }).then(function(response) {
             console.log(response.status);
+            navigate(`/learn-korean/learning/${moduleName}`)
         }).catch(function(error) {
             console.log(error.response.status);
             if (error.response.status === ERR_UNAUTHORIZED) {
