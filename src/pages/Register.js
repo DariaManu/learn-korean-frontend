@@ -1,7 +1,8 @@
-import {useState} from "react";
+import {useContext, useState} from "react";
 import {useNavigate} from "react-router-dom";
 
 import axios from "axios";
+import {UserContext} from "../context/UserContext";
 
 const accountBaseUrl = 'http://localhost:8082/account'
 
@@ -10,6 +11,8 @@ function Register() {
     const [password, setPassword] = useState("");
     const [username, setUsername] = useState("");
     const [login, setLogin] = useState(true);
+
+    const {user, setUser} = useContext(UserContext);
 
     const navigate = useNavigate();
 
@@ -24,6 +27,13 @@ function Register() {
             password: password
         }).then(function (response) {
             console.log(response);
+            console.log(response.data);
+            let data = response.data;
+            setUser({
+                id: data.learnerUserId,
+                username: data.username,
+                progressLevel: data.userProgressLevel
+            });
             navigate("/learn-korean");
         }).catch(function (error) {
             console.log(error);
@@ -42,6 +52,13 @@ function Register() {
             username: username
         }).then(function (response) {
             console.log(response);
+            console.log(response.data);
+            let data = response.data;
+            setUser({
+                id: data.learnerUserId,
+                username: data.username,
+                progressLevel: data.userProgressLevel
+            });
             navigate("/learn-korean");
         }).catch(function (error) {
             console.log(error);

@@ -1,14 +1,17 @@
 import NavigationBar from "../component/NavigationBar";
-import {useEffect, useState} from "react";
+import {useContext, useEffect, useState} from "react";
 
 import axios from "axios";
 import WordTranslationItem from "../component/WordTranslationItem";
+import {UserContext} from "../context/UserContext";
+import UserInfoComponent from "../component/UserInfoComponent";
 
 const dictionaryBaseUrl = "http://localhost:8081/vocabulary";
 
 function Dictionary() {
     const [word, setWord] = useState("");
     const [translations, setTranslations] = useState([]);
+    const {user} = useContext(UserContext);
 
     const handleSearch = (event) => {
         event.preventDefault();
@@ -25,6 +28,7 @@ function Dictionary() {
 
     return (
         <div>
+            <UserInfoComponent user={user}/>
             <NavigationBar/>
             <form>
                 <input type={"text"} placeholder={"Search for a word"} onChange={e => setWord(e.target.value)}/>
