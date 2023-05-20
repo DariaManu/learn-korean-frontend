@@ -1,6 +1,10 @@
 import './App.css';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Register from "./pages/Register";
+import HomePage from "./pages/HomePage";
+import Dictionary from "./pages/Dictionary";
+import Learning from "./pages/Learning";
+import Blog from "./pages/Blog";
 
 function App() {
   return (
@@ -8,6 +12,10 @@ function App() {
           <Routes>
               <Route path={"/"} element={<Register/>}></Route>
               <Route path={"/login"} element={<Register/>}></Route>
+              <Route path={"/learn-korean"} element={<HomePage/>}></Route>
+              <Route path={"/learn-korean/dictionary"} element={<Dictionary/>}></Route>
+              <Route path={"/learn-korean/learning"} element={<Learning/>}></Route>
+              <Route path={"/learn-korean/blog"} element={<Blog/>}></Route>
           </Routes>
       </BrowserRouter>
   );

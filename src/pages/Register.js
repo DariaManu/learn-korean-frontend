@@ -1,4 +1,5 @@
 import {useState} from "react";
+import {useNavigate} from "react-router-dom";
 
 import axios from "axios";
 
@@ -10,6 +11,8 @@ function Register() {
     const [username, setUsername] = useState("");
     const [login, setLogin] = useState(true);
 
+    const navigate = useNavigate();
+
     const loginUser = (event) => {
         event.preventDefault();
         console.log("login user");
@@ -20,7 +23,8 @@ function Register() {
             email: email,
             password: password
         }).then(function (response) {
-            console.log(response)
+            console.log(response);
+            navigate("/learn-korean");
         }).catch(function (error) {
             console.log(error);
         });
@@ -38,6 +42,7 @@ function Register() {
             username: username
         }).then(function (response) {
             console.log(response);
+            navigate("/learn-korean");
         }).catch(function (error) {
             console.log(error);
         });
