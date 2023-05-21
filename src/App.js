@@ -11,17 +11,12 @@ import Module1 from "./learning-modules/Module1";
 import Module2 from "./learning-modules/Module2";
 import QuizPage from "./pages/QuizPage";
 import QuizHistoryPage from "./pages/QuizHistoryPage";
+import AuthProvider from "./context/AuthProvider";
 
 function App() {
-    const [user, setUser] = useState({
-        id: null,
-        username: null,
-        progressLevel: null
-    });
-
     return (
         <BrowserRouter>
-            <UserContext.Provider value={{user, setUser}}>
+            <AuthProvider>
                 <Routes>
                     <Route path={"/"} element={<Register/>}></Route>
                     <Route path={"/login"} element={<Register/>}></Route>
@@ -37,7 +32,7 @@ function App() {
 
                     <Route path={"/learn-korean/blog"} element={<Blog/>}></Route>
                 </Routes>
-            </UserContext.Provider>
+            </AuthProvider>
         </BrowserRouter>
     );
 }
