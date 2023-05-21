@@ -10,6 +10,7 @@ import {UserContext} from "./context/UserContext";
 import Module1 from "./learning-modules/Module1";
 import Module2 from "./learning-modules/Module2";
 import QuizPage from "./pages/QuizPage";
+import QuizHistoryPage from "./pages/QuizHistoryPage";
 
 function App() {
     const [user, setUser] = useState({
@@ -32,6 +33,7 @@ function App() {
                     <Route path={"/learn-korean/learning/module2"} element={<Module2 moduleName={"module2"}/>}></Route>
 
                     <Route path={"/learn-korean/learning/:moduleName/quiz"} element={<QuizPage/>}></Route>
+                    <Route path={"/learn-korean/learning/:moduleName/quiz/history"} element={<QuizHistoryPage/>}></Route>
 
                     <Route path={"/learn-korean/blog"} element={<Blog/>}></Route>
                 </Routes>

@@ -10,7 +10,7 @@ function Module1(props) {
             <p>text to be added later</p>
 
             <button onClick={() => navigate(`/learn-korean/learning/${moduleName}/quiz`)}>Take quiz</button>
-            <button>Show quiz history</button>
+            <button onClick={() => navigate(`/learn-korean/learning/${moduleName}/quiz/history`)}>Show quiz history</button>
         </div>
     )
 }
