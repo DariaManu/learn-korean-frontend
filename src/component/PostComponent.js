@@ -1,4 +1,5 @@
 import {useState} from "react";
+import CommentComponent from "./CommentComponent";
 
 function PostComponent(props) {
     const post = props.post;
@@ -10,14 +11,7 @@ function PostComponent(props) {
         <div>
             <p>{post.datePosted}</p>
             <p>{post.text}</p>
-            <button>Load Comments</button>
-            {
-                !(comments.length === 0) && (
-                    comments.map((comment) => (
-                        <div>Comment</div>
-                    ))
-                )
-            }
+            <CommentComponent postId={post.postId}></CommentComponent>
         </div>
     )
 }
