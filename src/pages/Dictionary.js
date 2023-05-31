@@ -28,7 +28,6 @@ function Dictionary() {
 
     return (
         <div>
-            <UserInfoComponent user={user}/>
             <NavigationBar/>
             <form>
                 <input type={"text"} placeholder={"Search for a word"} onChange={e => setWord(e.target.value)}/>

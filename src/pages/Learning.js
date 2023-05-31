@@ -53,7 +53,6 @@ function Learning() {
 
     return (
         <div>
-            <UserInfoComponent user={user}/>
             <NavigationBar/>
             {
                 !(learningModuleNames.length === 0) ? (

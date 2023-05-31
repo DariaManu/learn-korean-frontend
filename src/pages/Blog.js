@@ -69,7 +69,6 @@ function Blog() {
 
     return (
         <div>
-            <UserInfoComponent user={user}/>
             <hr></hr>
             <NavigationBar/>
             <hr></hr>

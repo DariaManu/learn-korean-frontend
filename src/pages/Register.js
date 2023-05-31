@@ -12,7 +12,7 @@ function Register() {
     const [username, setUsername] = useState("");
     const [login, setLogin] = useState(true);
 
-    const {user, setUser} = useContext(UserContext);
+    const {user, setUser, isAuthenticated, setIsAuthenticated} = useContext(UserContext);
 
     const navigate = useNavigate();
 
@@ -34,6 +34,7 @@ function Register() {
                 username: data.username,
                 progressLevel: data.userProgressLevel
             });
+            setIsAuthenticated(true);
             navigate("/learn-korean");
         }).catch(function (error) {
             console.log(error);
@@ -59,6 +60,7 @@ function Register() {
                 username: data.username,
                 progressLevel: data.userProgressLevel
             });
+            setIsAuthenticated(true);
             navigate("/learn-korean");
         }).catch(function (error) {
             console.log(error);

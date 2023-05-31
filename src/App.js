@@ -12,11 +12,14 @@ import Module2 from "./learning-modules/Module2";
 import QuizPage from "./pages/QuizPage";
 import QuizHistoryPage from "./pages/QuizHistoryPage";
 import AuthProvider from "./context/AuthProvider";
+import Module3 from "./learning-modules/Module3";
+import UserInfoComponent from "./component/UserInfoComponent";
 
 function App() {
     return (
         <BrowserRouter>
             <AuthProvider>
+                <UserInfoComponent/>
                 <Routes>
                     <Route path={"/"} element={<Register/>}></Route>
                     <Route path={"/login"} element={<Register/>}></Route>
@@ -26,6 +29,7 @@ function App() {
 
                     <Route path={"/learn-korean/learning/module1"} element={<Module1 moduleName={"module1"}/>}></Route>
                     <Route path={"/learn-korean/learning/module2"} element={<Module2 moduleName={"module2"}/>}></Route>
+                    <Route path={"/learn-korean/learning/module3"} element={<Module3 moduleName={"module3"}/>}></Route>
 
                     <Route path={"/learn-korean/learning/:moduleName/quiz"} element={<QuizPage/>}></Route>
                     <Route path={"/learn-korean/learning/:moduleName/quiz/history"} element={<QuizHistoryPage/>}></Route>

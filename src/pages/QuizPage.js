@@ -127,7 +127,6 @@ function QuizPage() {
 
     return (
         <div>
-            <UserInfoComponent user={user}/>
             <form id={"quiz"}>
             </form>
             {

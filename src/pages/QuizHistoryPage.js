@@ -26,7 +26,6 @@ function QuizHistoryPage() {
 
     return (
         <div>
-            <UserInfoComponent user={user}/>
             {
                 !(quizAttempts.length === 0) && (
                     quizAttempts.map((quizAttempt, index) => (

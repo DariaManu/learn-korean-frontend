@@ -8,7 +8,6 @@ function HomePage() {
 
     return (
       <div>
-          <UserInfoComponent user={user}/>
           <NavigationBar/>
           <p>Welcome!</p>
       </div>
