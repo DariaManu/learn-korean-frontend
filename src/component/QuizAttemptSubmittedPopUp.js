@@ -4,17 +4,17 @@ function QuizAttemptSubmittedPopUp(props) {
     return (props.trigger) ? (
         <div className={"popup"}>
             <div className={"popup-inner"}>
-                <button onClick={() => props.setTrigger(false)} className={"close-btn"}>close</button>
+                <button style={{backgroundColor: "white"}} onClick={() => props.setTrigger(false)} className={"close-btn"}>Close</button>
                 {
                     props.quizPassed ? (
                         <div>
-                            <p>Congratulations, you passed the quiz!</p>
-                            <p>Score: {props.score}</p>
+                            <p style={{backgroundColor: "white"}}>Congratulations, you passed the quiz!</p>
+                            <p style={{backgroundColor: "white"}}>Score: {props.score}</p>
                         </div>
                     ) : (
                         <div>
-                            <p>Study a bit more then come back later!</p>
-                            <p>Score: {props.score}</p>
+                            <p style={{backgroundColor: "white"}}>Study a bit more then come back later!</p>
+                            <p style={{backgroundColor: "white"}}>Score: {props.score}</p>
                         </div>
                     )
                 }

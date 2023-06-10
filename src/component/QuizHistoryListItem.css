@@ -1,0 +1,26 @@
+.quiz-history-list-item {
+    width: 700px;
+    padding: 20px;
+    background-color: #D5FFF3;
+    border: 1px solid black;
+}
+
+.quiz-history-list-item h2:hover {
+    cursor: pointer;
+}
+
+.quiz-history-list-item h2 {
+    background-color: #D5FFF3;
+}
+
+.quiz-details-div {
+    background-color: #D5FFF3;
+}
+
+.quiz-details-div ol {
+    background-color: #D5FFF3;
+}
+
+.quiz-details-div li {
+    background-color: #D5FFF3;
+}

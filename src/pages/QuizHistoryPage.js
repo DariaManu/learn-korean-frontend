@@ -6,6 +6,9 @@ import axios from "axios";
 import QuizHistoryListItem from "../component/QuizHistoryListItem";
 import UserInfoComponent from "../component/UserInfoComponent";
 
+import "./QuizHistoryPage.css"
+import NavigationBarComponent from "../component/NavigationBarComponent";
+
 const quizHistoryBaseUrl = "http://localhost:8083/quiz/history";
 
 function QuizHistoryPage() {
@@ -26,14 +29,18 @@ function QuizHistoryPage() {
 
     return (
         <div>
-            {
-                !(quizAttempts.length === 0) && (
-                    quizAttempts.map((quizAttempt, index) => (
-                        <QuizHistoryListItem quizAttempt={quizAttempt} index={index}/>
-                    ))
-                )
-            }
-            <button onClick={() => navigate("/learn-korean/learning")}>Back to Learning page</button>
+            <NavigationBarComponent/>
+
+            <div id={"quiz-history-div"}>
+                {
+                    !(quizAttempts.length === 0) && (
+                        quizAttempts.map((quizAttempt, index) => (
+                            <QuizHistoryListItem quizAttempt={quizAttempt} index={index}/>
+                        ))
+                    )
+                }
+                <button onClick={() => navigate("/learn-korean/learning")}>Back to Learning page</button>
+            </div>
         </div>
     )
 }

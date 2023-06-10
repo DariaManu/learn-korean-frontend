@@ -1,6 +1,8 @@
 import {useState} from "react";
 import CommentComponent from "./CommentComponent";
 
+import "./PostComponent.css"
+
 function PostComponent(props) {
     const post = props.post;
     const [comments, setComments] = useState([]);
@@ -8,8 +10,8 @@ function PostComponent(props) {
     const [page, setPage] = useState(0);
 
     return (
-        <div>
-            <p>{post.datePosted}</p>
+        <div className={"post"}>
+            <p> <b>POSTED ON {post.datePosted} </b></p>
             <p>{post.text}</p>
             <CommentComponent postId={post.postId}></CommentComponent>
         </div>

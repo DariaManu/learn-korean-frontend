@@ -7,6 +7,8 @@ import axios from "axios";
 import PostComponent from "../component/PostComponent";
 import InfiniteScroll from "react-infinite-scroll-component";
 
+import "./Blog.css"
+
 const postsBaseUrl = "http://localhost:8084/posts";
 
 function Blog() {
@@ -69,31 +71,33 @@ function Blog() {
 
     return (
         <div>
-            <hr></hr>
             <NavigationBarComponent/>
-            <hr></hr>
 
-            <form>
-                <textarea id={"write-post-text-area"} name={"write-post-text-area"}
-                    onChange={e => setNewPostText(e.target.value)} value={newPostText}></textarea>
-                <button onClick={handleWritePost}>Post</button>
-            </form>
+            <div id={"blog-div"}>
+                <form>
+                    <textarea id={"write-post-text-area"} name={"write-post-text-area"}
+                          onChange={e => setNewPostText(e.target.value)} value={newPostText}></textarea>
+                    <br/><br/>
+                    <button id={"add-post-button"} onClick={handleWritePost}>Post</button>
+                </form>
 
-            <InfiniteScroll
-                next={fetchNextPosts}
-                hasMore={posts.length < maxNrPosts}
-                loader={<p>Loading...</p>}
-                dataLength={posts.length}>
-                <div style={{maxWidth: "500px"}}>
-            {
-                !(posts.length === 0) ? (
-                    posts.map((post, ) => (
-                        <PostComponent post={post}/>
-                    ))
-                ) : ""
-            }
-                </div>
-            </InfiniteScroll>
+                <InfiniteScroll
+                    next={fetchNextPosts}
+                    hasMore={posts.length < maxNrPosts}
+                    loader={<p>Loading...</p>}
+                    dataLength={posts.length}>
+                    <div id={"blog-posts-div"}>
+                        {
+                            !(posts.length === 0) ? (
+                                posts.map((post, ) => (
+                                    <PostComponent post={post}/>
+                                ))
+                            ) : ""
+                        }
+                    </div>
+                </InfiniteScroll>
+            </div>
+
         </div>
     )
 }

@@ -16,6 +16,7 @@
     padding: 10px;
     border: none;
     outline: none;
+    cursor: pointer;
 }
 
 #user-info-div button:hover {

@@ -54,18 +54,19 @@ function Learning() {
     return (
         <div>
             <NavigationBarComponent/>
-            {
-                !(learningModuleNames.length === 0) ? (
-                    learningModuleNames.map((name) => {
-                        return <p onClick={handleClickOnModuleName} className={"module-name"}>{name}</p>
-                    })
-                ) : (
-                    <p>Learning</p>
-                )
-            }
-            <AccessDeniedPopUp trigger={!moduleAccess} closePopUp={setModuleAccess}>
-                <h2>You don't have access to this module yet!</h2>
-            </AccessDeniedPopUp>
+            <div id={"learning-div"}>
+                {
+                    !(learningModuleNames.length === 0) ? (
+                        learningModuleNames.map((name) => {
+                            return <p onClick={handleClickOnModuleName} className={"module-name"}>{name}</p>
+                        })
+                    ) : ""
+                }
+                <br/>
+                <AccessDeniedPopUp trigger={!moduleAccess} closePopUp={setModuleAccess}>
+                    <h2>You don't have access to this module yet!</h2>
+                </AccessDeniedPopUp>
+            </div>
         </div>
     )
 }

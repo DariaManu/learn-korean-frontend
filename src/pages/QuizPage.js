@@ -5,6 +5,9 @@ import axios from "axios";
 import UserInfoComponent from "../component/UserInfoComponent";
 import {UserContext} from "../context/UserContext";
 import QuizAttemptSubmittedPopUp from "../component/QuizAttemptSubmittedPopUp";
+import NavigationBarComponent from "../component/NavigationBarComponent";
+
+import "./QuizPage.css"
 
 const quizBaseUrl = "http://localhost:8083/quiz";
 
@@ -47,6 +50,7 @@ function QuizPage() {
                 let question = questions[i];
                 //create a div element that will contain the question text and question answers
                 let questionDiv = document.createElement("div");
+                questionDiv.className = "question-div";
                 //create a p element for the question text and set the innerText attribute of the p element to be the question text
                 let questionText = document.createElement("p");
                 questionText.innerText = question.questionText;
@@ -127,17 +131,22 @@ function QuizPage() {
 
     return (
         <div>
-            <form id={"quiz"}>
-            </form>
-            {
-                allowSubmitAttempt ? (
-                    <button onClick={handleSubmitForm}>submit</button>
-                ) : (
-                    <Link to={"/learn-korean/learning"}>Learning</Link>
-                )
-            }
-            <QuizAttemptSubmittedPopUp trigger={quizSubmitted} setTrigger={setQuizSubmitted} quizPassed={quizPassed} score={score}>
-            </QuizAttemptSubmittedPopUp>
+            <NavigationBarComponent/>
+
+            <div id={"quiz-div"}>
+                <form id={"quiz"}>
+                </form>
+                {
+                    allowSubmitAttempt ? (
+                        <button onClick={handleSubmitForm}>Submit</button>
+                    ) : (
+                        <Link id={"back-to-learning-link"} to={"/learn-korean/learning"}>Back to Learning Page</Link>
+                    )
+                }
+                <QuizAttemptSubmittedPopUp trigger={quizSubmitted} setTrigger={setQuizSubmitted} quizPassed={quizPassed} score={score}>
+                </QuizAttemptSubmittedPopUp>
+            </div>
+
         </div>
     );
 }

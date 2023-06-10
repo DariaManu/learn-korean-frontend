@@ -3,6 +3,8 @@ import {useState} from "react";
 import axios from "axios";
 import InfiniteScroll from "react-infinite-scroll-component";
 
+import "./CommentComponent.css"
+
 const commentsBaseUrl = "http://localhost:8084/post"
 
 function CommentComponent(props) {
@@ -64,42 +66,48 @@ function CommentComponent(props) {
 
     if (!showComments) {
         return (
-            <button onClick={event => {
-                setShowComments(true);
-                if (firstLoad) {
-                    fetchFirstComments();
-                    setFirstLoad(false);
+            <div className={"load-comments-div"}>
+                <button onClick={event => {
+                    setShowComments(true);
+                    if (firstLoad) {
+                        fetchFirstComments();
+                        setFirstLoad(false);
+                    }
                 }
-            }
-            }>Load Comments</button>
+                }>Load Comments</button>
+            </div>
         )
     } else {
         return (
-            <div>
-                <form>
+            <div className={"comment-div"}>
+                <form id={"comment-form"}>
                     <textarea id={"write-comment-text-area"} name={"write-comment-text-area"}
                         onChange={e => setNewCommentText(e.target.value)} value={newCommentText}>
                     </textarea>
-                    <button onClick={handleWriteComment}>Post</button>
+                    <br/>
+                    <button id={"write-comment-button"} onClick={handleWriteComment}>Post</button>
                 </form>
                 <InfiniteScroll
                     next={fetchNextComments}
                     hasMore={comments.length < maxNrComments}
                     loader={<p>Loading...</p>}
-                    dataLength={comments.length}>
+                    dataLength={comments.length}
+                    id={"infinite-scroll-component"}>
                     {
                         !(comments.length === 0) ? (
                             comments.map((comment) => (
-                                <div>
-                                    <p>{comment.datePosted}</p>
+                                <div className={"single-comment-div"}>
+                                    <p> <b>POSTED ON {comment.datePosted}</b> </p>
                                     <p>{comment.text}</p>
                                 </div>
 
                             ))
-                        ) : "Be the first to comment :D"
+                        ) : (
+                            <p>Be the first to comment :D</p>
+                        )
                     }
                 </InfiniteScroll>
-                <button onClick={event => setShowComments(false)}>Hide Comments</button>
+                <button id={"hide-comments-button"} onClick={event => setShowComments(false)}>Hide Comments</button>
             </div>
         )
     }

@@ -1,0 +1,64 @@
+.comment-div {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #D5FFF3;
+}
+
+.load-comments-div {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #D5FFF3;
+}
+
+.load-comments-div button {
+    background-color: black;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+}
+
+#write-comment-text-area {
+    width: 400px;
+    height: 30px;
+    resize: none;
+    background-color: white;
+}
+
+#comment-form {
+    background-color: #D5FFF3;
+}
+
+#write-comment-button {
+    background-color: black;
+    color: white;
+}
+
+#hide-comments-button {
+    background-color: black;
+    color: white;
+    padding: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.infinite-scroll-component {
+    background-color: #D5FFF3;
+}
+
+.single-comment-div {
+    margin-top: 15px;
+    padding: 5px;
+    width: 300px;
+    border: 1px solid black;
+    background-color: #D5FFF3;
+}
+
+b {
+    background-color: #D5FFF3;
+}

@@ -1,3 +1,5 @@
+import "./WorldTranslationItem.css"
+
 function WordTranslationItem(props) {
     if (props.props.meaning === null) {
         return (
@@ -7,9 +9,9 @@ function WordTranslationItem(props) {
         );
     } else {
         return (
-            <div>
-                <p>Translation: {props.props.translation}</p>
-                <p>Meaning: {props.props.meaning}</p>
+            <div className={"word-translation-item"}>
+                <p className={"translation"}>Translation: {props.props.translation}</p>
+                <p className={"meaning"}>Meaning: {props.props.meaning}</p>
             </div>
         );
     }

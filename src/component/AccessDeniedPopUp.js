@@ -4,7 +4,7 @@ function AccessDeniedPopUp(props) {
     return (props.trigger) ? (
         <div className={"popup"}>
             <div className={"popup-inner"}>
-                <button onClick={() => props.closePopUp(true)} className={"close-btn"}>close</button>
+                <button onClick={() => props.closePopUp(true)} className={"close-btn"}>Close</button>
                 {props.children}
             </div>
         </div>

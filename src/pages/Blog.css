@@ -1,0 +1,23 @@
+#blog-div {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#write-post-text-area {
+    width: 500px;
+    height: 150px;
+    resize: none;
+    background-color: white;
+}
+
+#blog-posts-div {
+    width: 500px;
+}
+
+#add-post-button {
+    background-color: #D5FFF3;
+    cursor: pointer;
+}
