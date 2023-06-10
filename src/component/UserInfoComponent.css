@@ -1,0 +1,23 @@
+#user-info-div {
+    background-color: black;
+    float: right;
+}
+
+#user-info-div p {
+    background-color: black;
+    color: white;
+    display: inline-block;
+    padding: 10px;
+}
+
+#user-info-div button {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+#user-info-div button:hover {
+    background-color: #282c34;
+}

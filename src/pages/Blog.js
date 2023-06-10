@@ -1,4 +1,4 @@
-import NavigationBar from "../component/NavigationBar";
+import NavigationBarComponent from "../component/NavigationBarComponent";
 import {useContext, useEffect, useState} from "react";
 import {UserContext} from "../context/UserContext";
 import UserInfoComponent from "../component/UserInfoComponent";
@@ -70,7 +70,7 @@ function Blog() {
     return (
         <div>
             <hr></hr>
-            <NavigationBar/>
+            <NavigationBarComponent/>
             <hr></hr>
 
             <form>

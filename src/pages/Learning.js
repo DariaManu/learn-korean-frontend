@@ -1,9 +1,9 @@
-import NavigationBar from "../component/NavigationBar";
+import NavigationBarComponent from "../component/NavigationBarComponent";
 import {useContext, useEffect, useState} from "react";
 import {UserContext} from "../context/UserContext";
 import UserInfoComponent from "../component/UserInfoComponent";
 
-import './learning-style.css'
+import './Learning.css'
 
 import axios from "axios";
 import AccessDeniedPopUp from "../component/AccessDeniedPopUp";
@@ -53,7 +53,7 @@ function Learning() {
 
     return (
         <div>
-            <NavigationBar/>
+            <NavigationBarComponent/>
             {
                 !(learningModuleNames.length === 0) ? (
                     learningModuleNames.map((name) => {

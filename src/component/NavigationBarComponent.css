@@ -1,0 +1,25 @@
+#menu {
+    background-color: black;
+}
+
+#menu li {
+    display: inline-block;
+    background-color: black;
+    padding: 10px;
+}
+
+.menu-item {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+}
+
+#menu li:hover {
+    background-color: #282c34;
+}
+
+.menu-item:hover {
+    background-color: #282c34;
+}

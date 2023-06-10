@@ -1,5 +1,6 @@
 import {useContext, useState} from "react";
 import {useNavigate} from "react-router-dom";
+import './Register.css'
 
 import axios from "axios";
 import {UserContext} from "../context/UserContext";
@@ -79,27 +80,43 @@ function Register() {
 
     if (login) {
         return (
-            <div>
+            <div id={'login-div'}>
                 <form>
-                    <input type={"text"} placeholder={"email"} onChange={event => setEmail(event.target.value)}/>
-                    <input type={"text"} placeholder={"password"} onChange={event => setPassword(event.target.value)}/>
-                    <button onClick={loginUser}>Login</button>
+                    <label>Email</label>
+                    <br/>
+                    <input id={"login-email"} className={"register-form-input"} type={"text"} onChange={event => setEmail(event.target.value)}/>
+                    <br/>
+                    <label>Password</label>
+                    <br/>
+                    <input id={"login-password"} className={"register-form-input"} type={"password"} onChange={event => setPassword(event.target.value)}/>
+                    <br/><br/>
+                    <button className={"register-button"} onClick={loginUser}>Login</button>
                 </form>
                 <p>Don't have an account? Sign up now!</p>
-                <button onClick={changeToSignUp}>Sign Up</button>
+                <br/>
+                <button className={"register-button"} onClick={changeToSignUp}>Sign Up</button>
             </div>
         );
     } else {
         return (
-            <div>
+            <div id={'signup-div'}>
                 <form>
-                    <input type={"text"} placeholder={"email"} onChange={event => setEmail(event.target.value)}/>
-                    <input type={"text"} placeholder={"password"} onChange={event => setPassword(event.target.value)}/>
-                    <input type={"text"} placeholder={"username"} onChange={event => setUsername(event.target.value)}/>
-                    <button onClick={signUpUser}>Sign Up</button>
+                    <label>Email</label>
+                    <br/>
+                    <input className={"register-form-input"} type={"text"} onChange={event => setEmail(event.target.value)}/>
+                    <br/><br/>
+                    <label>Password</label>
+                    <br/>
+                    <input className={"register-form-input"} type={"password"} onChange={event => setPassword(event.target.value)}/>
+                    <br/><br/>
+                    <label>Username</label>
+                    <br/>
+                    <input className={"register-form-input"} type={"text"} onChange={event => setUsername(event.target.value)}/>
+                    <br/><br/>
+                    <button className={"register-button"} onClick={signUpUser}>Sign Up</button>
                 </form>
-                <p>Back to Login</p>
-                <button onClick={changeToLogin}>Login</button>
+                <br/><br/>
+                <button className={"register-button"} onClick={changeToLogin}>Back to Login</button>
             </div>
         )
     }

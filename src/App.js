@@ -14,11 +14,13 @@ import QuizHistoryPage from "./pages/QuizHistoryPage";
 import AuthProvider from "./context/AuthProvider";
 import Module3 from "./learning-modules/Module3";
 import UserInfoComponent from "./component/UserInfoComponent";
+import AppHeaderComponent from "./component/AppHeaderComponent";
 
 function App() {
     return (
         <BrowserRouter>
             <AuthProvider>
+                <AppHeaderComponent/>
                 <UserInfoComponent/>
                 <Routes>
                     <Route path={"/"} element={<Register/>}></Route>

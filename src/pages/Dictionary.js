@@ -1,4 +1,4 @@
-import NavigationBar from "../component/NavigationBar";
+import NavigationBarComponent from "../component/NavigationBarComponent";
 import {useContext, useEffect, useState} from "react";
 
 import axios from "axios";
@@ -28,7 +28,7 @@ function Dictionary() {
 
     return (
         <div>
-            <NavigationBar/>
+            <NavigationBarComponent/>
             <form>
                 <input type={"text"} placeholder={"Search for a word"} onChange={e => setWord(e.target.value)}/>
                 <button onClick={handleSearch}>Search</button>
