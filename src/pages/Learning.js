@@ -22,8 +22,8 @@ function Learning() {
 
     useEffect(() => {
       console.log("fetch learning module names");
-      console.log(`${learningBaseUrl}/module`);
-      axios.get(`${learningBaseUrl}/module`)
+      console.log(`${learningBaseUrl}/modules`);
+      axios.get(`${learningBaseUrl}/modules`)
           .then(function(response) {
               let data = response.data;
               console.log(data);
@@ -37,9 +37,9 @@ function Learning() {
         console.log("click on module name");
         let moduleName = event.target.innerText;
         console.log(moduleName);
-        axios.post(`${learningBaseUrl}/module`, {
+        axios.post(`${learningBaseUrl}/modules`, {
             learningModuleName: moduleName,
-            userProgressLevel: user.progressLevel
+            learnerUserId: user.id
         }).then(function(response) {
             console.log(response.status);
             navigate(`/learn-korean/learning/${moduleName}`)

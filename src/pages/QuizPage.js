@@ -22,7 +22,7 @@ function QuizPage() {
     const {user} = useContext(UserContext);
 
     useEffect(() => {
-        axios.get(`${quizBaseUrl}/question/${moduleName}`)
+        axios.get(`${quizBaseUrl}/questions/${moduleName}`)
             .then(function (response) {
                 let qs = response.data;
                 console.log(qs);

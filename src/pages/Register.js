@@ -4,6 +4,7 @@ import './Register.css'
 
 import axios from "axios";
 import {UserContext} from "../context/UserContext";
+import RegisterErrorPopUp from "../component/RegisterErrorPopUp";
 
 const accountBaseUrl = 'http://localhost:8082/account'
 
@@ -12,6 +13,8 @@ function Register() {
     const [password, setPassword] = useState("");
     const [username, setUsername] = useState("");
     const [login, setLogin] = useState(true);
+    const [showErrorMessage, setShowErrorMessage] = useState(false);
+    const [errorMessage, setErrorMessage] = useState("");
 
     const {user, setUser, isAuthenticated, setIsAuthenticated} = useContext(UserContext);
 
@@ -38,7 +41,9 @@ function Register() {
             setIsAuthenticated(true);
             navigate("/learn-korean");
         }).catch(function (error) {
-            console.log(error);
+            console.log(error.response.data.message);
+            setErrorMessage(error.response.data.message);
+            setShowErrorMessage(true);
         });
     }
 
@@ -63,9 +68,11 @@ function Register() {
             });
             setIsAuthenticated(true);
             navigate("/learn-korean");
-        }).catch(function (error) {
-            console.log(error);
-        });
+        }).catch(error => {
+            console.log(error.response.data.message);
+            setErrorMessage(error.response.data.message);
+            setShowErrorMessage(true);
+        })
     }
 
     const changeToSignUp = (event) => {
@@ -95,6 +102,9 @@ function Register() {
                 <p>Don't have an account? Sign up now!</p>
                 <br/>
                 <button className={"register-button"} onClick={changeToSignUp}>Sign Up</button>
+
+                <RegisterErrorPopUp trigger={showErrorMessage} setTrigger={setShowErrorMessage} errorMessage={errorMessage}>
+                </RegisterErrorPopUp>
             </div>
         );
     } else {
@@ -117,6 +127,9 @@ function Register() {
                 </form>
                 <br/><br/>
                 <button className={"register-button"} onClick={changeToLogin}>Back to Login</button>
+
+                <RegisterErrorPopUp trigger={showErrorMessage} setTrigger={setShowErrorMessage} errorMessage={errorMessage}>
+                </RegisterErrorPopUp>
             </div>
         )
     }
