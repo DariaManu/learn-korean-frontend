@@ -11,6 +11,7 @@ function AuthProvider(props) {
         progressLevel: null
     });
     const [isAuthenticated, setIsAuthenticated] = useState(false);
+    const [progressLevelChanged, setProgressLevelChanged] = useState(false);
 
     useEffect(() => {
         if (isAuthenticated) {
@@ -28,13 +29,14 @@ function AuthProvider(props) {
                         username: username,
                         progressLevel: response.body
                     });
+                    setProgressLevelChanged(true);
                 })
             })
         }
     }, [isAuthenticated]);
 
     return (
-        <UserContext.Provider value={{user, setUser, isAuthenticated, setIsAuthenticated}}>
+        <UserContext.Provider value={{user, setUser, isAuthenticated, setIsAuthenticated, progressLevelChanged, setProgressLevelChanged}}>
             {props.children}
         </UserContext.Provider>
     )

@@ -146,7 +146,6 @@ function QuizPage() {
                 <QuizAttemptSubmittedPopUp trigger={quizSubmitted} setTrigger={setQuizSubmitted} quizPassed={quizPassed} score={score}>
                 </QuizAttemptSubmittedPopUp>
             </div>
-
         </div>
     );
 }
