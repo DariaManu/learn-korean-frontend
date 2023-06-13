@@ -6,3 +6,8 @@
     justify-content: center;
     font-size: 28px;
 }
+
+#welcome-message p {
+
+    width: 700px;
+}

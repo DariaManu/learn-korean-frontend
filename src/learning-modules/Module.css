@@ -10,6 +10,33 @@
     padding: 20px;
     max-width: 800px;
     border:1px solid black;
+    background-color: #D5FFF3;
+}
+
+.module-content-div i {
+    background-color: #D5FFF3;
+}
+
+.module-content-div a {
+    background-color: #D5FFF3;
+    text-decoration: none;
+}
+
+.module-content-div h4 {
+    background-color: #D5FFF3;
+}
+
+.module-content-div u {
+    background-color: #D5FFF3;
+}
+
+.module-content-div li {
+    background-color: #D5FFF3;
+}
+
+.module-content-div ol {
+    margin-left: 30px;
+    background-color: #D5FFF3;
 }
 
 .module-content-div button {
@@ -18,3 +45,11 @@
     margin: 20px;
     cursor: pointer;
 }
+
+.tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
+.tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
+    font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
+    font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-baqh{text-align:center;vertical-align:top}
+.tg .tg-dzk6{background-color:#f9f9f9;text-align:center;vertical-align:top}

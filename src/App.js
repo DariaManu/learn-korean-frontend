@@ -29,9 +29,9 @@ function App() {
                     <Route path={"/learn-korean/dictionary"} element={<Dictionary/>}></Route>
                     <Route path={"/learn-korean/learning"} element={<Learning/>}></Route>
 
-                    <Route path={"/learn-korean/learning/module1"} element={<Module1 moduleName={"module1"}/>}></Route>
-                    <Route path={"/learn-korean/learning/module2"} element={<Module2 moduleName={"module2"}/>}></Route>
-                    <Route path={"/learn-korean/learning/module3"} element={<Module3 moduleName={"module3"}/>}></Route>
+                    <Route path={"/learn-korean/learning/Module1-Alphabet"} element={<Module1 moduleName={"Module1-Alphabet"}/>}></Route>
+                    <Route path={"/learn-korean/learning/Module2-Family"} element={<Module2 moduleName={"Module2-Family"}/>}></Route>
+                    <Route path={"/learn-korean/learning/Module3-Food"} element={<Module3 moduleName={"Module3-Food"}/>}></Route>
 
                     <Route path={"/learn-korean/learning/:moduleName/quiz"} element={<QuizPage/>}></Route>
                     <Route path={"/learn-korean/learning/:moduleName/quiz/history"} element={<QuizHistoryPage/>}></Route>
