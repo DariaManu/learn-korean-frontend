@@ -13,17 +13,42 @@ function Module2(props) {
             <NavigationBarComponent/>
 
             <div className={"module-content-div"}>
+                <h1>{moduleName}</h1>
+
                 <p>
-
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis ipsum sit amet ligula luctus dapibus. Praesent erat sem, congue vel vestibulum ut, blandit at felis. Praesent aliquam neque et fringilla accumsan. Vestibulum sed justo interdum magna placerat feugiat ut vel libero. Aliquam aliquet blandit rhoncus. Nulla vel sem mi. Duis non dictum risus. Nunc diam sapien, porta at purus interdum, scelerisque posuere diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum ante velit, elementum tincidunt enim scelerisque sit amet. Fusce hendrerit nec ex in convallis. Fusce justo ex, scelerisque ac erat ac, feugiat convallis ante.
-
-                    Nunc et justo odio. Fusce tincidunt libero ac ipsum convallis, sed lacinia tortor vulputate. In sed lacus quis dui condimentum tincidunt. Etiam finibus ligula quis orci varius tristique. Vestibulum velit nisi, gravida quis elementum id, malesuada non arcu. Duis tempus leo eget purus fermentum pulvinar. Vivamus rutrum vulputate dapibus. Phasellus semper bibendum diam, a hendrerit enim congue et. Aliquam in tellus sem.
-
-                    Maecenas vitae sapien erat. Morbi volutpat vel metus eget placerat. Morbi quis cursus tellus. Vivamus ut mauris vel dui maximus feugiat. Nullam vestibulum felis eu mauris lacinia mattis. Suspendisse potenti. Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras nec est id libero tempus sollicitudin sed quis nisi. Nam semper a orci et congue.
-
-                    Praesent blandit, ex sed luctus aliquet, nunc arcu fermentum enim, id dapibus nulla nibh ut ipsum. Donec nec massa porta eros mattis tincidunt eget a ligula. Nunc pulvinar felis nulla, et feugiat velit blandit in. Mauris et mattis ante. Vivamus a dolor a eros malesuada aliquam et consectetur neque. Sed lorem velit, maximus sed lacus ac, venenatis interdum odio. Donec malesuada ac diam ac volutpat. Nulla efficitur sollicitudin placerat. Nulla non eros ac eros dictum malesuada. Maecenas nec mauris scelerisque, pretium neque vel, cursus purus. Ut ut commodo ante, volutpat interdum lorem. Maecenas at vulputate libero, nec dapibus orci. Sed molestie urna tellus, a dapibus enim dignissim a. Morbi in leo odio. Pellentesque vestibulum augue pharetra interdum suscipit. Quisque ullamcorper, libero sit amet pellentesque aliquet, arcu metus sagittis odio, et mattis libero velit at mi.
-
-                    Morbi sit amet urna posuere, laoreet turpis in, mattis magna. Pellentesque mollis justo sit amet metus hendrerit, eu dapibus dui consectetur. Fusce non nisl ut augue feugiat eleifend vel et libero. Duis convallis ornare ultrices. Duis ornare elit eget mattis dignissim. Ut ac porta purus. Maecenas a ex dictum, vehicula nulla eget, rhoncus dui. Ut feugiat quis risus eleifend condimentum. Praesent id consequat elit. Integer sollicitudin congue nulla sed cursus. Integer scelerisque sagittis erat at convallis. Aenean maximus, lacus a efficitur varius, ipsum libero blandit ex, at blandit nisi ligula sed sem. Donec lacus leo, pellentesque in lorem id, interdum pulvinar nisl.
+                    Honorifics are very important in Korean and are something you will encounter in Korean literally every day.
+                    From when you call a stranger who dropped a purse or a worker in a restaurant to when you talk to your parents
+                    or boss, every daily situation involves using honorifics.
+                    <br/><br/>
+                    The reason for the importance of honorification in Korean is that it is required by the vertical hierarchy of
+                    Confucianism, where age and social status play a big part. An idiom 장유유서(長幼有序) is the one that shows
+                    the basis of Confucianism, which means there is a strict order that needs to be followed and obeyed between
+                    adults and children. Therefore, it is a huge deal in Korea to show proper respect to older people, which refers
+                    to physically older or of a higher social status.
+                    <br/><br/>
+                    If a Korean chooses the wrong honorific, it can result in humiliation, embarrassment or even offending the listeners.
+                    Sometimes we can hear the news that two men fought each other seriously and its cause turned out that one man started
+                    to use an informal/impolite speech manner, which is called 반말 (banmal) in Korean, to the other man.
+                    It is an extreme case, but it gives away how important it is to use appropriate speech levels and honorifics in Korean society.
+                    <br/><br/>
+                    So, you might be wondering, why are we talking about formal speech inside a module about family??? And you
+                    would be right to ask because generally, in western cultures, you wouldn't have to worry about addressing your parents or
+                    your siblings in a certain way. In Korea however it doesn't work like that, you have to always respect your elders, even if
+                    they barely a year older than you. You still have to use special forms of formal, polite speech. Here are the words you
+                    would use when talking to first degree family members:
+                    <ul>
+                        <li>mother = 어머니 -> 엄마 (informal)</li>
+                        <li>father = 아버지 -> 아빠 (informal)</li>
+                        <li>boy's older sister = 누나</li>
+                        <li>girl's older sister = 언니</li>
+                        <li>boy's older brother = 형</li>
+                        <li>girl's older sister = 오빠</li>
+                    </ul>
+                    <br/><br/>
+                    Now you might have noticed something very strange. Why on earth are there 4 different words to call your elder sibling? Well, that's
+                    just the way it is and you'll have to learn all of them if you don't want to upset Korean people when talking to them.
+                    In English, there are two words to address siblings depending on gender: sister and brother. The Korean language, however,
+                    specifies sibling terms according to the gender and age of the speaker and interlocutor.
                 </p>
 
                 <div>

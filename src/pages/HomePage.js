@@ -15,7 +15,7 @@ function HomePage() {
               <h1>Welcome to LearnKorean!</h1>
               <p>
                   Learn Korean was developed as a passion project to help people study Korean in a fun way, while also
-                  putting an emphasis on cultural aspects that make Korea and the Korean language so intriguing fo so
+                  putting an emphasis on cultural aspects that make Korea and the Korean language so intriguing for so
                   many people. I hope you have fun and good luck with studying! :D
               </p>
           </div>

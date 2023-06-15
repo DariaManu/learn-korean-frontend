@@ -13,17 +13,25 @@ function Module3(props) {
             <NavigationBarComponent/>
 
             <div className={"module-content-div"}>
+                <h1>{moduleName}</h1>
+
                 <p>
-
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis ipsum sit amet ligula luctus dapibus. Praesent erat sem, congue vel vestibulum ut, blandit at felis. Praesent aliquam neque et fringilla accumsan. Vestibulum sed justo interdum magna placerat feugiat ut vel libero. Aliquam aliquet blandit rhoncus. Nulla vel sem mi. Duis non dictum risus. Nunc diam sapien, porta at purus interdum, scelerisque posuere diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum ante velit, elementum tincidunt enim scelerisque sit amet. Fusce hendrerit nec ex in convallis. Fusce justo ex, scelerisque ac erat ac, feugiat convallis ante.
-
-                    Nunc et justo odio. Fusce tincidunt libero ac ipsum convallis, sed lacinia tortor vulputate. In sed lacus quis dui condimentum tincidunt. Etiam finibus ligula quis orci varius tristique. Vestibulum velit nisi, gravida quis elementum id, malesuada non arcu. Duis tempus leo eget purus fermentum pulvinar. Vivamus rutrum vulputate dapibus. Phasellus semper bibendum diam, a hendrerit enim congue et. Aliquam in tellus sem.
-
-                    Maecenas vitae sapien erat. Morbi volutpat vel metus eget placerat. Morbi quis cursus tellus. Vivamus ut mauris vel dui maximus feugiat. Nullam vestibulum felis eu mauris lacinia mattis. Suspendisse potenti. Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras nec est id libero tempus sollicitudin sed quis nisi. Nam semper a orci et congue.
-
-                    Praesent blandit, ex sed luctus aliquet, nunc arcu fermentum enim, id dapibus nulla nibh ut ipsum. Donec nec massa porta eros mattis tincidunt eget a ligula. Nunc pulvinar felis nulla, et feugiat velit blandit in. Mauris et mattis ante. Vivamus a dolor a eros malesuada aliquam et consectetur neque. Sed lorem velit, maximus sed lacus ac, venenatis interdum odio. Donec malesuada ac diam ac volutpat. Nulla efficitur sollicitudin placerat. Nulla non eros ac eros dictum malesuada. Maecenas nec mauris scelerisque, pretium neque vel, cursus purus. Ut ut commodo ante, volutpat interdum lorem. Maecenas at vulputate libero, nec dapibus orci. Sed molestie urna tellus, a dapibus enim dignissim a. Morbi in leo odio. Pellentesque vestibulum augue pharetra interdum suscipit. Quisque ullamcorper, libero sit amet pellentesque aliquet, arcu metus sagittis odio, et mattis libero velit at mi.
-
-                    Morbi sit amet urna posuere, laoreet turpis in, mattis magna. Pellentesque mollis justo sit amet metus hendrerit, eu dapibus dui consectetur. Fusce non nisl ut augue feugiat eleifend vel et libero. Duis convallis ornare ultrices. Duis ornare elit eget mattis dignissim. Ut ac porta purus. Maecenas a ex dictum, vehicula nulla eget, rhoncus dui. Ut feugiat quis risus eleifend condimentum. Praesent id consequat elit. Integer sollicitudin congue nulla sed cursus. Integer scelerisque sagittis erat at convallis. Aenean maximus, lacus a efficitur varius, ipsum libero blandit ex, at blandit nisi ligula sed sem. Donec lacus leo, pellentesque in lorem id, interdum pulvinar nisl.
+                    Koreans understand that food is not just for nutrition but also for mental and emotional well-being.
+                    Sometimes they even use questions like 밥 먹었어요?, which translate to "Have you eaten?", as a form of greeting.
+                    In the west, if somebody greeted you like this you might think that they want to invite you to lunch or dinner, but in Korea
+                    it is genuinely a way of showing to the other person that you care about them and their wellbeing.
+                    <br/><br/>
+                    Korean culture places a lot of importance on sharing food. In Korea banchan (Korean side dishes)
+                    sharing is a feature on the table at mealtimes and so meals are naturally more communal. Banchan are
+                    lots of little side dishes spread across the table. Every Korean dining table looks like there is a
+                    party taking place — full of variation and colour. While meals are communal, it’s rude to keep going
+                    back and forth to the dishes. Take enough food each time, don’t double-dip and don’t eat directly
+                    from the serving plates.
+                    In a restaurant in Korea, you don’t even have to order banchan, they’ll automatically
+                    bring out a selection — and it’ll always include kimchi (more on Korean kimchi culture later).
+                    Banchan includes vegetable dishes, seafood, seasoned eggs and sometimes meat. What’s more, banchan
+                    in restaurants is usually included for free and you can often simply ask for a refill! There is sometimes
+                    a communal grill in the middle of the table for grilling your own meat.
                 </p>
 
                 <div>

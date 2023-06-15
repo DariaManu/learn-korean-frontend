@@ -13,6 +13,7 @@ const dictionaryBaseUrl = "http://localhost:8081/vocabulary";
 function Dictionary() {
     const [word, setWord] = useState("");
     const [translations, setTranslations] = useState([]);
+    const [alternativeMessage, setAlternativeMessage] = useState("");
     const {user} = useContext(UserContext);
 
     const handleSearch = (event) => {
@@ -23,6 +24,9 @@ function Dictionary() {
             .then(function (response) {
                 let data = response.data;
                 setTranslations(data);
+                if (data.length === 0) {
+                    setAlternativeMessage("We don't have a translation for this word yet, but don't worry, we're working on it!");
+                }
             }).catch(function (error) {
                 console.log(error);
         });
@@ -41,7 +45,7 @@ function Dictionary() {
                         translations.map((translation) => {
                             return <WordTranslationItem props={translation}/>
                         })
-                    ) : ""
+                    ) : alternativeMessage
                 }
             </div>
         </div>
